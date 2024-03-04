@@ -35,3 +35,42 @@ test("Negativ durch negative Zahl ist größer als 0", () => {
 
   expect(result).toBeGreaterThan(0);
 });
+
+
+// HAUSAUFGABE 04.03.2024 
+
+test("Die Differenz aus 2 - 5 ist -3", () => {
+  const result = calculator.subtract(2, 5);
+
+  expect(result).toEqual(-3);
+});
+
+test("Die Differenz aus -2 - 5 ist -7", () => {
+  const result = calculator.subtract(-2, 5);
+
+  expect(result).toEqual(-7);
+});
+
+test("Die Differenz aus 0 - 5 ist -5", () => {
+  const result = calculator.subtract(0, 5);
+
+  expect(result).toEqual(-5);
+});
+
+test("Die Multiplikation aus 2 * 5 ist 10", () => {
+  const result = calculator.multiply(2, 5);
+
+  expect(result).toEqual(10);
+});
+
+test("Die Multiplikation aus 2 * -5 ist -10", () => {
+  const result = calculator.multiply(2, -5);
+
+  expect(result).toEqual(-10);
+});
+
+test("Die Multiplikation aus 0 * 5 ist 10", () => {
+  const result = calculator.multiply(0, 5);
+
+  expect(result).toEqual(0);
+});
