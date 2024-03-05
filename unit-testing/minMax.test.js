@@ -1,37 +1,78 @@
 const minMax = require("./minMax");
 
-test("a ist kleiner als b", () => {
-    const result = minMax.min(1, 5);
-  
-    expect(result).toEqual(1);
-  });
-
-test("b ist kleiner als a", () => {
-    const result = minMax.min(10, 5);
-  
-    expect(result).toEqual(5);
-  });
-
-test("a und b sind gleich", () => {
-    const result = minMax.min(5, 5);
-  
-    expect(result).toEqual(5);
-  });
 
 test("a ist kleiner als b", () => {
-    const result = minMax.max(1, 5);
-  
-    expect(result).toEqual(5);
-  });
+
+  //Arrange
+  const [a, b] = [1, 5];
+
+  //Act
+  const result = minMax.min(a, b);
+
+  //Expect
+  expect(result).toEqual(1);
+});
+
 
 test("b ist kleiner als a", () => {
-    const result = minMax.max(10, 5);
-  
-    expect(result).toEqual(10);
-  });
+    
+  //Arrange
+  const [a, b] = [10, 5];
+
+  //Act
+  const result = minMax.min(a, b);
+
+  //Expect
+  expect(result).toEqual(5);
+});
+
 
 test("a und b sind gleich", () => {
-    const result = minMax.max(5, 5);
+    
+  //Arrange
+  const [a, b] = [5, 5];
+    
+  //Act
+  const result = minMax.min(a, b);
   
-    expect(result).toEqual(5);
-  });
+  //Expect
+  expect(result).toEqual(5);
+});
+
+
+test("a ist kleiner als b", () => {
+    
+  //Arrange
+  const [a, b] = [1, 5];
+
+  //Act
+  const result = minMax.max(a, b);
+
+  //Expect
+  expect(result).toEqual(5);
+});
+
+
+test("b ist kleiner als a", () => {
+    
+  //Arrange
+  const [a, b] = [10, 5];
+
+  //Act
+  const result = minMax.max(a, b);
+
+  //Expect
+  expect(result).toEqual(10);
+});
+
+test("a und b sind gleich", () => {
+
+  //Arrange
+  const [a, b] = [5, 5];
+
+  //Act
+  const result = minMax.max(a, b);
+
+  //Expect
+  expect(result).toEqual(5);
+});
